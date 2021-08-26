@@ -1,0 +1,35 @@
+{
+	"name": "@lihbr/module-docs",
+	"version": "1.0.0",
+	"description": "[demo] Provides contextual links to module's docs",
+	"keywords": [
+		"nuxt",
+		"module",
+		"nuxt-module",
+		"global-module"
+	],
+	"repository": {
+		"type": "git",
+		"url": "ssh://git@github.com/lihbr/nuxt-demo-global-modules.git"
+	},
+	"license": "MIT",
+	"author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
+	"main": "src/module.js",
+	"bin": {
+		"module-docs": "bin/cli.js"
+	},
+	"scripts": {
+		"postinstall": "node bin/cli.js"
+	},
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"node-fetch": "^2.6.1",
+		"rc9": "^1.2.0"
+	},
+	"engines": {
+		"node": ">=12.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
