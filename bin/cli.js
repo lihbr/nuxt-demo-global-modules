@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const path = require("path");
 const { readUser, writeUser } = require("rc9");
 const pkg = require("../package.json");
