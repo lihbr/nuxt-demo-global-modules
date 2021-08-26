@@ -14,7 +14,7 @@ A demo global module used during my talk: _"An Introduction to Nuxt Global Modul
 # install package globally
 npm install --global @lihbr/module-docs
 
-# enable/disable the global module (enabled by default)
+# enable the global module once (run again to disable, etc.)
 module-docs
 ```
 

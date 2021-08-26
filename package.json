@@ -19,7 +19,7 @@
 		"module-docs": "bin/cli.js"
 	},
 	"scripts": {
-		"postinstall": "node bin/cli.js"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
 		"chalk": "^4.1.2",
