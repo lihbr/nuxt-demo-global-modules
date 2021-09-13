@@ -3,7 +3,7 @@
 A demo global module used during my talk: _"An Introduction to Nuxt Global Modules"_.
 
 - [📖 &nbsp;Nuxt Modules documentation](https://nuxtjs.org/docs/2.x/directory-structure/modules)
-- [👩‍🏫 &nbsp;Talk slides](https://lihbr.com)
+- [👩‍🏫 &nbsp;Talk resources](https://diapositiv.lihbr.com/talk/an-introduction-to-nuxt-global-modules)
 - [💐 &nbsp;More from Lucie](https://lihbr.com/?source=nuxt-demo-global-modules)
 
 ## Install
