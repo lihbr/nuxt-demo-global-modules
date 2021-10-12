@@ -6,7 +6,7 @@ export default async function moduleDocs() {
 	let allModuleManifests;
 	try {
 		const res = await fetch(
-			"https://unpkg.com/@nuxt/modules/dist/modules.json"
+			"https://unpkg.com/@nuxt/modules/dist/modules.json",
 		);
 		if (!res.ok) {
 			throw res;
@@ -20,26 +20,30 @@ export default async function moduleDocs() {
 	// 2. Get registered modules
 	const registeredModules = [
 		...this.options.modules,
-		...this.options.buildModules
-	].map(module => Array.isArray(module) ? module[0] : module);
+		...this.options.buildModules,
+	].map((module) => (Array.isArray(module) ? module[0] : module));
 
 	// 3. Get registered modules manifests and sort them
 	const registeredModuleManifests = allModuleManifests
-		.filter(manifest => registeredModules.includes(manifest.npm))
-		.sort((a, b) => a.category > b.category ? 1 : -1);
+		.filter((manifest) => registeredModules.includes(manifest.npm))
+		.sort((a, b) => (a.category > b.category ? 1 : -1));
 
 	// A function that displays our modules info
 	const printModulesInfo = () => {
 		const lines = [];
 
-		lines.push(chalk.blueBright("📚 Modules Docs:\n"));
-		registeredModuleManifests.forEach(manifest => {
-			lines.push(
-				`${chalk.yellow(manifest.npm)} (${
-					manifest.category
-				}): ${chalk.cyanBright(manifest.website)}`
-			);
-		});
+		lines.push("📚 Modules Docs:\n");
+		if (registeredModuleManifests.length === 0) {
+			lines.push(chalk.blackBright("(no modules found)"));
+		} else {
+			registeredModuleManifests.forEach((manifest) => {
+				lines.push(
+					`${chalk.yellow(manifest.npm)} (${
+						manifest.category
+					}): ${chalk.cyanBright(manifest.website)}`,
+				);
+			});
+		}
 		lines.push("");
 
 		console.log(lines.join("\n"));

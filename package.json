@@ -1,6 +1,6 @@
 {
 	"name": "@lihbr/module-docs",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "A demo global module used during my talk: \"An Introduction to Nuxt Global Modules\"",
 	"keywords": [
 		"nuxt",
